@@ -28,7 +28,7 @@ public class ServerExtendManager extends ServerManager {
             while (!status.equals(completeStatus.type)) {
                 try {
                     Thread.sleep(statusCheckTimeMills);
-                    waitResult = getServerInstanceList(serverInstanceNoList, null, null, null, null, null, null, null, null, null);
+                    waitResult = getServerInstanceList(serverInstanceNoList, null, null, null, null, null, null, null, null, null, null, null);
                     status = waitResult.getServerInstanceList().get(0).getServerInstanceStatus().getCode();
                     LoggerFactory.getLogger(this.getClass()).info("Instance Current Status : " + status);
                 } catch (InterruptedException e) {

@@ -4,32 +4,20 @@ NcpPipe만 담겨있는 라이브러리로 Java 8의 Function으로 랩핑되어
 
 ### 변경점
 <pre>
+0.0.2 ncloud-api-0.2.5.jar -> ncloud-api-1.0.2-SNAPSHOT-jar-with-dependencies.jar로 의존성 변경
 0.0.1 초기버전
 </pre>
 
 ### 의존성
 * Java 8
-* ncloud-api-0.2.5.jar 가 가져야 할 의존성
-<pre>
-compile group: 'commons-codec', name: 'commons-codec', version: '1.4'
-compile group: 'commons-lang', name: 'commons-lang', version: '2.3'
-compile group: 'commons-logging', name: 'commons-logging', version: '1.1.1'
-compile group: 'org.codehaus.jettison', name: 'jettison', version: '1.3.3'
-compile group: 'com.jcraft', name: 'jsch', version: '0.1.44-1'
-compile group: 'log4j', name: 'log4j', version: '1.2.14'
-compile group: 'org.slf4j', name: 'slf4j-api', version: '1.6.0'
-compile group: 'stax', name: 'stax-api', version: '1.0.1'
-compile group: 'xmlpull', name: 'xmlpull', version: '1.1.3.1'
-compile group: 'xpp3', name: 'xpp3_min', version: '1.1.4c'
-compile group: 'com.thoughtworks.xstream', name: 'xstream', version: '1.4.2'
-compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.6.0'
-</pre>
+
 * NcpPipe가 가져야 할 의존성
 
 <pre>
-compile files('libs/ncloud-api-0.2.5.jar')
+compile files('libs/ncloud-api-1.0.2-SNAPSHOT-jar-with-dependencies.jar')
 compile group: 'org.eclipse.jgit', name: 'org.eclipse.jgit', version: '4.9.0.201710071750-r'
 compile group: 'org.apache.commons', name: 'commons-exec', version: '1.3'
+compile group: 'com.jcraft', name: 'jsch', version: '0.1.44-1'
 </pre>
 
 ### Function 사용(example)
@@ -55,9 +43,9 @@ CompletableFuture<Function<Object, Object>> completableFuture = CompletableFutur
 
 
 ### NcpManager
-1. 기본적으로 ncloud-api-0.2.5.jar에 의존성이 있음
-2. ncloud-api-0.2.5.jar의 기본 Api들이 Job으로 감싸여있음
-3. ncloud-api-0.2.5.jar 모든 Api들이 포함되어 있지는 않음. 필요시 직접 구현
+1. 기본적으로 ncloud-api-1.0.2-SNAPSHOT-jar-with-dependencies.jar에 의존성이 있음
+2. ncloud-api-1.0.2-SNAPSHOT-jar-with-dependencies.jar의 기본 Api들이 Job으로 감싸여있음
+3. ncloud-api-1.0.2-SNAPSHOT-jar-with-dependencies.jar 모든 Api들이 포함되어 있지는 않음. 필요시 직접 구현
 <pre>
 NcloudApiRequest ncloudApiRequest = new NcloudApiRequest();
 
@@ -78,9 +66,9 @@ SuspendProcessManager suspendProcessManager = new SuspendProcessManager(ncloudAp
 
 
 ### NcpExtendManager
-1. 기본적으로 ncloud-api-0.2.5.jar에 의존성이 있음
-2. ncloud-api-0.2.5.jar의 기본 Api들이 Blue/Grean Deploy에 이용할 몇 가지 Job으로 감싸여있음
-3. ncloud-api-0.2.5.jar 모든 Api들이 포함되어 있지는 않음. 필요시 직접 구현
+1. 기본적으로 ncloud-api-1.0.2-SNAPSHOT-jar-with-dependencies.jar에 의존성이 있음
+2. ncloud-api-1.0.2-SNAPSHOT-jar-with-dependencies.jar의 기본 Api들이 Blue/Grean Deploy에 이용할 몇 가지 Job으로 감싸여있음
+3. ncloud-api-1.0.2-SNAPSHOT-jar-with-dependencies.jar 모든 Api들이 포함되어 있지는 않음. 필요시 직접 구현
 
 <pre>
 NcloudApiRequest ncloudApiRequest = new NcloudApiRequest();

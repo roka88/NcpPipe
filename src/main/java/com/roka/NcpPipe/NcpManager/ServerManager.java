@@ -45,8 +45,8 @@ public class ServerManager extends ServerConnection {
         return (result)-> super.terminateServerInstances(serverInstanceNoList);
     }
 
-    public Function<Object, ServerInstanceList> getServerInstanceListForJob(List<String> serverInstanceNoList, Integer pageNo, Integer pageSize, String serverInstanceStatusCode, String internetLineTypeCode, String regionNo, String baseBlockStorageDiskTypeCode, String baseBlockStorageDiskDetailTypeCode, String sortedBy, String sortingOrder)  {
-        return (result)-> super.getServerInstanceList(serverInstanceNoList, pageNo, pageSize, serverInstanceStatusCode, internetLineTypeCode, regionNo, baseBlockStorageDiskTypeCode, baseBlockStorageDiskDetailTypeCode, sortedBy, sortingOrder);
+    public Function<Object, ServerInstanceList> getServerInstanceListForJob(List<String> serverInstanceNoList, String searchFilterName, String searchFilterValue, Integer pageNo, Integer pageSize, String serverInstanceStatusCode, String internetLineTypeCode, String regionNo, String baseBlockStorageDiskTypeCode, String baseBlockStorageDiskDetailTypeCode, String sortedBy, String sortingOrder)  {
+        return (result)-> super.getServerInstanceList(serverInstanceNoList, searchFilterName, searchFilterValue, pageNo, pageSize, serverInstanceStatusCode, internetLineTypeCode, regionNo, baseBlockStorageDiskTypeCode, baseBlockStorageDiskDetailTypeCode, sortedBy, sortingOrder);
     }
 
     public Function<Object, ServerInstanceList> createServerInstancesForJob(String serverImageProductCode, String serverProductCode, String memberServerImageNo, String serverName, String serverDescription, String loginKeyName, Boolean isProtectServerTermination, Integer serverCreateCount, Integer serverCreateStartNo, String internetLineTypeCode, String feeSystemTypeCode, String userData, String zoneNo, List<String> accessControlGroupConfigurationNoList) {
